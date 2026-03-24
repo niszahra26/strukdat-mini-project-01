@@ -128,6 +128,15 @@ int main() {
 ```
 ### 3. Screenshot
 
+Test case 1
+
+<img width="772" height="287" alt="image" src="https://github.com/user-attachments/assets/756d4e4f-8c9b-4e3b-baaf-d6f218f5864e" />
+
+Test case 2
+
+<img width="718" height="267" alt="image" src="https://github.com/user-attachments/assets/40295407-791e-463b-9651-8072414820c9" />
+
+
 ## B. Queue
 
 ### 1. Case Explanation
@@ -295,6 +304,16 @@ int main() {
 
 ### 3. Screenshot
 
+Test case 1
+
+<img width="679" height="250" alt="image" src="https://github.com/user-attachments/assets/16e80671-0f8f-43d5-a6ae-8704f3d1101c" />
+
+
+Test case 2
+
+<img width="693" height="295" alt="image" src="https://github.com/user-attachments/assets/79af4737-ea8e-4ece-87e8-2316eac86cb5" />
+
+
 ## C. Dequeue
 
 ### 1. Case Explanation
@@ -425,3 +444,13 @@ int main() {
 }
 ```
 ### 3. Screenshot
+
+Test case 1
+
+<img width="675" height="228" alt="image" src="https://github.com/user-attachments/assets/6a15475d-5352-4e8a-9ef5-424035e02ec7" />
+
+
+Test case 2
+
+<img width="680" height="250" alt="image" src="https://github.com/user-attachments/assets/6cbeee01-0792-4743-a0f9-fd728d18336d" />
+
