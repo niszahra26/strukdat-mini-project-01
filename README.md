@@ -237,6 +237,63 @@ int main() {
 }
 ```
 
+#### Full Code
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int countStudents(int* students, int n, int* sandwiches) {
+    int queue[100];
+    int front = 0;
+    int rear = n;
+
+    for (int i = 0; i < n; i++) {
+        queue[i] = students[i]; //copying the students into queue array
+    }
+
+    int stackIndex = 0;
+    int rotationsWithoutEating = 0;
+
+    while ((rear - front) > 0 && rotationsWithoutEating < (rear - front)) {
+
+        if (queue[front] == sandwiches[stackIndex]) {
+            front++;
+            stackIndex++;
+            rotationsWithoutEating = 0;
+        } else {
+            queue[rear] = queue[front];
+            rear++;
+            front++;
+            rotationsWithoutEating++;
+        }
+    }
+
+    return (rear - front);
+}
+
+int main() {
+    int n;
+    scanf ("%d", &n);
+
+    int students[100];
+    int sandwiches[100];
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &students[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &sandwiches[i]);
+    }
+
+    int result = countStudents(students, n, sandwiches);
+    printf("Students unable to eat: %d\n", result);
+
+    return 0;
+}
+
+```
+
 ### 3. Screenshot
 
 ## C. Dequeue
@@ -331,4 +388,41 @@ int main() {
 }
 ```
 
+#### Full Code
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int findTheWinner(int n, int k) {
+    int *queue = (int*)malloc(n * n * sizeof(int));
+    int front = 0;
+    int rear = 0;
+
+    for (int i = 1; i <= n; i++) {
+        queue[rear++] = i;
+    }
+
+    while ((rear - front) > 1) {
+        for (int i = 0; i < k - 1; i++) {
+            queue[rear++] = queue[front++];
+        }
+        front++;
+    }
+
+    int winner = queue[front];
+    free(queue);
+    return winner;
+}
+
+int main() {
+    int n, k;
+    scanf ("%d %d", &n, &k);
+
+    int winner = findTheWinner(n, k);
+    printf("The winner is friend: %d\n", winner);
+
+    return 0;
+}
+```
 ### 3. Screenshot
