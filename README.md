@@ -1,0 +1,1 @@
+# strukdat-mini-project-01
