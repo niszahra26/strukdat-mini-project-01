@@ -1,5 +1,4 @@
 # strukdat-mini-project-01
----
 
 ## A. Stack
 
